@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Scanner;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
@@ -30,6 +32,10 @@ public class Main {
         AlanGrant();
         JurassicPark();
         strömmen();
+        Areana();
+        NumberJudgement();
+        AskName(args);
+        CallNames();
     }
 
     public static void Thor() {
@@ -146,16 +152,96 @@ public class Main {
 
     }
 
-    public static void strömmen(){
-       int ström = 0;
-       do{
-           System.out.println("Försöker återställa strömmen...");
-           ström++;
-}while(ström < 2);
+    public static void strömmen() {
+        int ström = 0;
+        do {
+            System.out.println("Försöker återställa strömmen...");
+            ström++;
+        } while (ström < 2);
         System.out.println("Strömmen återställd!");
     }
 
-    public static viod
+    ;
+
+    /*public static viod NumberJudge() {
+
+        boolen isOdd;
+        boolen isEven;
+        Boolen isPrime;
+        System.out.println("Please enter your number for the judgement!");
+        Scanner input=new Scanner(System.in);
+        int InputNum=input.nextln;
+        if (InputNum<2){
+            System.out.println("The number is not a prime number!");
+        }
+        else if(Math.sqrt(InputNum)==0{
+            System.out.println("The number is not a prime number!");
+        }
+        else{
+            for(int i=2;i<=Math.sqrt(InputNum);i++){
+                if(InputNum%i==0){
+                    System.out.println("The number is not a prime number!");
+                    return;
+                }
+            }
+            System.out.println("The number is a prime number!");
+    }
+
+*/
+    public static void Areana() {
+        System.out.println("Welcome to the Areana!");
+        int[] siffror = new int[5];
+        siffror[0] = 10;
+        siffror[1] = 20;
+        siffror[2] = 30;
+        siffror[3] = 40;
+        siffror[4] = 50;
+
+        for (int i = 0; i < siffror.length; i++) {
+            System.out.println(siffror[i]);
+        }
+
+    }
 
 
+    public static void NumberJudgement() {
+        System.out.println("Please enter your number for the judgement!");
+        int InputNum = new Scanner(System.in).nextInt();
+        if (InputNum < 2) {
+            System.out.println("The number is not a prime number!");
+        } else if (Math.sqrt(InputNum) == 0) {
+            System.out.println("The number is not a prime number!");
+        } else {
+            System.out.println("The number is a prime number!");
+
+        }
+        return;
+    }
+
+    public static void AskName(String[] args) {
+        String[] names = new String[5];
+        System.out.println("What is your name?");
+        Scanner scan = new Scanner(System.in);
+        String input = scan.nextLine();
+        if (input == null || input == "" || input.length() == 1) {
+            System.out.println("Please enter a name!");
+            return;
+        }
+        String name = new Scanner(System.in).nextLine();
+        for (int i = 0; i < names.length; i++) {
+            names[i] = name;
+        }
+        ;
+        System.out.println("Hello " + name);
+    }
+
+    public static void CallNames() {
+        String[] names = {"Pelle", "Kalle", "Nisse", "Lisa", "Anna"};
+        for (String name : names) {
+            if (name.contains("s") || name.contains("S")) {
+                System.out.println(name);
+
+            }
+        }
+    }
 }
